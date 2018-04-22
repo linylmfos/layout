@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Layout</title>
+    <style media="screen">
+      html *{
+        padding: 0;
+        margin: 0;
+      }
+      .layout article div{
+        min-height: 100px;
+      }
+    
+      .layout.float .left{
+        float:left;
+        width:300px;
+        background: red;
+      }
+      .layout.float .center{
+        background: yellow;
+      }
+      .layout.float .right{
+        float:right;
+        width:300px;
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="layout float">
+      <h1>三栏布局</h1>
+      <span>浮动方案一：缺点，当横向压缩宽度时，发现中间内容区的下方文字跑出了中间区域。并且中间区域的高度与左侧右侧的高度不一致。</span>
+      <article class="left-right-center">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="center">
+          <h2>浮动解决方案</h2>
+          1.这是三栏布局的浮动解决方案；
+          2.这是三栏布局的浮动解决方案；
+          3.这是三栏布局的浮动解决方案；
+          4.这是三栏布局的浮动解决方案；
+          5.这是三栏布局的浮动解决方案；
+          6.这是三栏布局的浮动解决方案；
+        </div>
+      </article>
+    </section>
+    <hr>
+    <section class="layout float">
+      <article class="left-right-center">
+        <div class="left" style="background:red"></div>
+        <div class="right" style="background:blue"></div>
+        <div class="center" style="overflow:auto">
+          <h2>浮动解决方案2</h2>
+          <span>浮动方案2， 给中间内容区域加了overflow:auto; 触发了BFC, 保证了中间内容区的文字不会跑到左右侧。但是中间内容区域的高度与两侧的高度不一致。</span>  
+          1.这是三栏布局的浮动解决方案；
+          2.这是三栏布局的浮动解决方案；
+          3.这是三栏布局的浮动解决方案；
+          4.这是三栏布局的浮动解决方案；
+          5.这是三栏布局的浮动解决方案；
+          6.这是三栏布局的浮动解决方案；
+        </div>
+      </article>
+  </section>
+  </body>
+</html>
