@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>flex layout</title>
+</head>
+<body>
+	<style>
+		.box{
+			display: -webkit-flex; /* Safari */
+			  display: flex;
+			  flex-flow:row wrap;
+			  justify-content:center;
+			  align-items: flex-start 
+		}
+		.item{flex:0 1 auto; width: 200px;height: 200px;background: red;margin-right: 10px;margin-top: 10px;flex-grow:1;}
+		.first{flex-shrink: 0;}
+		.last{flex-grow:2;}
+	</style>
+	<div class="box">
+		<div class="item first"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item last"></div>
+	</div>
+</body>
+</html>
